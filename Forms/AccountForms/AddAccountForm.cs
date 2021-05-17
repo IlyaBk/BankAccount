@@ -12,17 +12,13 @@ namespace BankAccountForm.Forms.AccountForms
 {
     public partial class AddAccountForm : Form
     {
+        
         public AddAccountForm()
         {
             InitializeComponent();
         }
 
-        private void groupBox3_Enter ( object sender, EventArgs e )
-        {
-
-        }
-
-        private void AddAccountForm_Load ( object sender, EventArgs e )
+        private void AddAccountForm_Load(object sender, EventArgs e)
         {
 
         }

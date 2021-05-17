@@ -29,6 +29,7 @@ namespace BankAccountForm.Forms.AccountForms
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -82,10 +83,11 @@ namespace BankAccountForm.Forms.AccountForms
             this.Item2 = new System.Windows.Forms.ToolStripMenuItem();
             this.Item3 = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.button_AddAccount = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.authorizDataBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.toolStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -97,6 +99,7 @@ namespace BankAccountForm.Forms.AccountForms
             this.menuStrip1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.authorizDataBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // toolStrip1
@@ -113,7 +116,7 @@ namespace BankAccountForm.Forms.AccountForms
             // toolStripLabel1
             // 
             this.toolStripLabel1.Name = "toolStripLabel1";
-            this.toolStripLabel1.Size = new System.Drawing.Size(77, 22);
+            this.toolStripLabel1.Size = new System.Drawing.Size(76, 22);
             this.toolStripLabel1.Text = "FILE SYSTEM:";
             // 
             // groupBox1
@@ -305,10 +308,10 @@ namespace BankAccountForm.Forms.AccountForms
             // 
             // textBox_AdressCountry
             // 
-            this.textBox_AdressCountry.Location = new System.Drawing.Point(9, 33);
+            this.textBox_AdressCountry.Location = new System.Drawing.Point(2, 33);
             this.textBox_AdressCountry.Multiline = true;
             this.textBox_AdressCountry.Name = "textBox_AdressCountry";
-            this.textBox_AdressCountry.Size = new System.Drawing.Size(118, 22);
+            this.textBox_AdressCountry.Size = new System.Drawing.Size(125, 22);
             this.textBox_AdressCountry.TabIndex = 12;
             // 
             // label7
@@ -337,10 +340,10 @@ namespace BankAccountForm.Forms.AccountForms
             // 
             // textBox_AdressNumberApartment
             // 
-            this.textBox_AdressNumberApartment.Location = new System.Drawing.Point(133, 112);
+            this.textBox_AdressNumberApartment.Location = new System.Drawing.Point(132, 112);
             this.textBox_AdressNumberApartment.Multiline = true;
             this.textBox_AdressNumberApartment.Name = "textBox_AdressNumberApartment";
-            this.textBox_AdressNumberApartment.Size = new System.Drawing.Size(118, 22);
+            this.textBox_AdressNumberApartment.Size = new System.Drawing.Size(124, 22);
             this.textBox_AdressNumberApartment.TabIndex = 26;
             // 
             // textBox_AdressPostcode
@@ -348,7 +351,7 @@ namespace BankAccountForm.Forms.AccountForms
             this.textBox_AdressPostcode.Location = new System.Drawing.Point(132, 33);
             this.textBox_AdressPostcode.Multiline = true;
             this.textBox_AdressPostcode.Name = "textBox_AdressPostcode";
-            this.textBox_AdressPostcode.Size = new System.Drawing.Size(119, 22);
+            this.textBox_AdressPostcode.Size = new System.Drawing.Size(125, 22);
             this.textBox_AdressPostcode.TabIndex = 17;
             // 
             // label6
@@ -377,18 +380,18 @@ namespace BankAccountForm.Forms.AccountForms
             // 
             // textBox_AdressNumberHome
             // 
-            this.textBox_AdressNumberHome.Location = new System.Drawing.Point(9, 112);
+            this.textBox_AdressNumberHome.Location = new System.Drawing.Point(2, 112);
             this.textBox_AdressNumberHome.Multiline = true;
             this.textBox_AdressNumberHome.Name = "textBox_AdressNumberHome";
-            this.textBox_AdressNumberHome.Size = new System.Drawing.Size(118, 22);
+            this.textBox_AdressNumberHome.Size = new System.Drawing.Size(125, 22);
             this.textBox_AdressNumberHome.TabIndex = 23;
             // 
             // textBox_AdressStreet
             // 
-            this.textBox_AdressStreet.Location = new System.Drawing.Point(132, 72);
+            this.textBox_AdressStreet.Location = new System.Drawing.Point(133, 72);
             this.textBox_AdressStreet.Multiline = true;
             this.textBox_AdressStreet.Name = "textBox_AdressStreet";
-            this.textBox_AdressStreet.Size = new System.Drawing.Size(119, 22);
+            this.textBox_AdressStreet.Size = new System.Drawing.Size(125, 22);
             this.textBox_AdressStreet.TabIndex = 21;
             // 
             // label11
@@ -405,10 +408,10 @@ namespace BankAccountForm.Forms.AccountForms
             // 
             // textBox_AdressCity
             // 
-            this.textBox_AdressCity.Location = new System.Drawing.Point(9, 72);
+            this.textBox_AdressCity.Location = new System.Drawing.Point(2, 72);
             this.textBox_AdressCity.Multiline = true;
             this.textBox_AdressCity.Name = "textBox_AdressCity";
-            this.textBox_AdressCity.Size = new System.Drawing.Size(118, 22);
+            this.textBox_AdressCity.Size = new System.Drawing.Size(125, 22);
             this.textBox_AdressCity.TabIndex = 20;
             // 
             // label10
@@ -517,7 +520,6 @@ namespace BankAccountForm.Forms.AccountForms
             this.groupBox3.TabIndex = 27;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "АВТОРИЗАЦИОННЫЕ ДАННЫЕ";
-            this.groupBox3.Enter += new System.EventHandler(this.groupBox3_Enter);
             // 
             // label13
             // 
@@ -547,10 +549,10 @@ namespace BankAccountForm.Forms.AccountForms
             // 
             this.comboBox_roleSystem.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.comboBox_roleSystem.FormattingEnabled = true;
-            this.comboBox_roleSystem.Location = new System.Drawing.Point(9, 70);
+            this.comboBox_roleSystem.Location = new System.Drawing.Point(2, 70);
             this.comboBox_roleSystem.Margin = new System.Windows.Forms.Padding(1);
             this.comboBox_roleSystem.Name = "comboBox_roleSystem";
-            this.comboBox_roleSystem.Size = new System.Drawing.Size(118, 23);
+            this.comboBox_roleSystem.Size = new System.Drawing.Size(125, 23);
             this.comboBox_roleSystem.TabIndex = 11;
             // 
             // comboBox_roleUser
@@ -560,15 +562,15 @@ namespace BankAccountForm.Forms.AccountForms
             this.comboBox_roleUser.Location = new System.Drawing.Point(132, 70);
             this.comboBox_roleUser.Margin = new System.Windows.Forms.Padding(1);
             this.comboBox_roleUser.Name = "comboBox_roleUser";
-            this.comboBox_roleUser.Size = new System.Drawing.Size(119, 23);
+            this.comboBox_roleUser.Size = new System.Drawing.Size(125, 23);
             this.comboBox_roleUser.TabIndex = 10;
             // 
             // textBox_login
             // 
-            this.textBox_login.Location = new System.Drawing.Point(9, 31);
+            this.textBox_login.Location = new System.Drawing.Point(2, 31);
             this.textBox_login.Multiline = true;
             this.textBox_login.Name = "textBox_login";
-            this.textBox_login.Size = new System.Drawing.Size(118, 22);
+            this.textBox_login.Size = new System.Drawing.Size(125, 22);
             this.textBox_login.TabIndex = 1;
             // 
             // label1
@@ -600,7 +602,7 @@ namespace BankAccountForm.Forms.AccountForms
             this.textBox_password.Location = new System.Drawing.Point(132, 31);
             this.textBox_password.Multiline = true;
             this.textBox_password.Name = "textBox_password";
-            this.textBox_password.Size = new System.Drawing.Size(119, 22);
+            this.textBox_password.Size = new System.Drawing.Size(125, 22);
             this.textBox_password.TabIndex = 8;
             // 
             // menuStrip1
@@ -634,7 +636,7 @@ namespace BankAccountForm.Forms.AccountForms
             this.вЫХОДToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.вЫХОДToolStripMenuItem.ForeColor = System.Drawing.Color.Gray;
             this.вЫХОДToolStripMenuItem.Name = "вЫХОДToolStripMenuItem";
-            this.вЫХОДToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
+            this.вЫХОДToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
             this.вЫХОДToolStripMenuItem.Text = "ВЫХОД";
             // 
             // пРОВЕРИТЬФАЙЛЫToolStripMenuItem
@@ -642,7 +644,7 @@ namespace BankAccountForm.Forms.AccountForms
             this.пРОВЕРИТЬФАЙЛЫToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.пРОВЕРИТЬФАЙЛЫToolStripMenuItem.ForeColor = System.Drawing.Color.Gray;
             this.пРОВЕРИТЬФАЙЛЫToolStripMenuItem.Name = "пРОВЕРИТЬФАЙЛЫToolStripMenuItem";
-            this.пРОВЕРИТЬФАЙЛЫToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
+            this.пРОВЕРИТЬФАЙЛЫToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
             this.пРОВЕРИТЬФАЙЛЫToolStripMenuItem.Text = "ПРОВЕРИТЬ ФАЙЛЫ";
             // 
             // Item2
@@ -673,6 +675,16 @@ namespace BankAccountForm.Forms.AccountForms
             this.groupBox2.TabIndex = 4;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "УПРАВЛЕНИЕ";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::BankAccountForm.Properties.Resources.contactlist_theuser_802;
+            this.pictureBox1.Location = new System.Drawing.Point(18, 251);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(88, 89);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 3;
+            this.pictureBox1.TabStop = false;
             // 
             // button2
             // 
@@ -710,15 +722,9 @@ namespace BankAccountForm.Forms.AccountForms
             this.button_AddAccount.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.button_AddAccount.UseVisualStyleBackColor = true;
             // 
-            // pictureBox1
+            // authorizDataBindingSource
             // 
-            this.pictureBox1.Image = global::BankAccountForm.Properties.Resources.contactlist_theuser_802;
-            this.pictureBox1.Location = new System.Drawing.Point(18, 251);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(88, 89);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 3;
-            this.pictureBox1.TabStop = false;
+            this.authorizDataBindingSource.DataSource = typeof(BankAccountForm.BaseClasses.AuthorizData);
             // 
             // AddAccountForm
             // 
@@ -754,6 +760,7 @@ namespace BankAccountForm.Forms.AccountForms
             this.menuStrip1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.authorizDataBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -772,50 +779,51 @@ namespace BankAccountForm.Forms.AccountForms
         private System.Windows.Forms.Button button_AddAccount;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox textBox_name1;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox_name2;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox_login;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox_AdressCountry;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox_name3;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox_password;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox textBox_AdressStreet;
-        private System.Windows.Forms.TextBox textBox_AdressCity;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBox_AdressPostcode;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.TextBox textBox_AdressNumberApartment;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox_AdressNumberHome;
-        private System.Windows.Forms.ComboBox comboBox_roleSystem;
-        private System.Windows.Forms.ComboBox comboBox_roleUser;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.GroupBox groupBox6;
-        private System.Windows.Forms.TextBox textBox_Email;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.TextBox textBox_PhoneNumber1;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.GroupBox groupBox5;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.GroupBox groupBox7;
         private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.TextBox textBox_PersonDescription;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.TextBox textBox_PersonDateCreation;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.ToolStripLabel toolStripLabel1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        internal System.Windows.Forms.TextBox textBox_name1;
+        internal System.Windows.Forms.TextBox textBox_name2;
+        internal System.Windows.Forms.TextBox textBox_login;
+        internal System.Windows.Forms.TextBox textBox_AdressCountry;
+        internal System.Windows.Forms.TextBox textBox_name3;
+        internal System.Windows.Forms.TextBox textBox_password;
+        internal System.Windows.Forms.TextBox textBox_AdressStreet;
+        internal System.Windows.Forms.TextBox textBox_AdressCity;
+        internal System.Windows.Forms.TextBox textBox_AdressPostcode;
+        internal System.Windows.Forms.TextBox textBox_AdressNumberApartment;
+        internal System.Windows.Forms.TextBox textBox_AdressNumberHome;
+        internal System.Windows.Forms.TextBox textBox_Email;
+        internal System.Windows.Forms.TextBox textBox_PhoneNumber1;
+        internal System.Windows.Forms.TextBox textBox_PersonDescription;
+        internal System.Windows.Forms.TextBox textBox_PersonDateCreation;
+        internal System.Windows.Forms.TextBox textBox1;
+        internal System.Windows.Forms.ComboBox comboBox_roleSystem;
+        internal System.Windows.Forms.ComboBox comboBox_roleUser;
+        private System.Windows.Forms.BindingSource authorizDataBindingSource;
     }
 }

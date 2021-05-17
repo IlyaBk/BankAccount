@@ -84,6 +84,8 @@
     <Compile Include="Data\GetData\DeserializerClass.cs" />
     <Compile Include="Data\GetData\DeserializerEncryptorClass.cs" />
     <Compile Include="Data\GetData\DeserializerJsonClass.cs" />
+    <Compile Include="Data\Guide\GuideUserRole.cs" />
+    <Compile Include="Data\Guide\GuideUserRoleSystemAdmin.cs" />
     <Compile Include="Data\SaveData\SerializerClass.cs" />
     <Compile Include="Data\SaveData\SerializerEncryptorClass.cs" />
     <Compile Include="Data\SaveData\SerializerJsonClass.cs" />
@@ -114,6 +116,7 @@
     </Compile>
     <Compile Include="Interfaces\IBalance.cs" />
     <Compile Include="Interfaces\IDeposite.cs" />
+    <Compile Include="Logic\LogicAddAccount.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Utilites\GetQuantityDirectoryFile.cs" />
@@ -141,6 +144,7 @@
       <DesignTime>True</DesignTime>
     </Compile>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\BankAccountForm.BaseClasses.AuthorizData.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -160,5 +164,6 @@
   <ItemGroup>
     <None Include="Resources\contactlist_theuser_802.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

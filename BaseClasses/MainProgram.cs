@@ -103,7 +103,7 @@ namespace BankAccountFormForm.BaseClasses
 
                 case "3":
                 Console.WriteLine("[DI Finance] >> Добавление новой учётной записи в систему");
-                AddNewAccount();
+                //AddNewAccount();
                 ConsoleControlPanel();
                 break;
 

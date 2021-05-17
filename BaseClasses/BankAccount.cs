@@ -15,23 +15,6 @@ namespace BankAccountForm.BaseClasses
         {
 
         }
-        //конструктор данных авторизации
-        public BankAccountForm(
-            int idperson, 
-            string login, 
-            string password, 
-            byte roleusersystemadmin, 
-            byte roleuser,
-            T BankAccountForm
-            )
-        {
-            IdPerson = idperson;
-            Login = login;
-            Password = password;
-            RoleUserSystemAdmin = roleusersystemadmin;
-            RoleUser = roleuser;
-            IdBankAccountForm = BankAccountForm;
-        }
 
 
         public T IdBankAccountForm { get; set; }

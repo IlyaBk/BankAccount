@@ -11,26 +11,6 @@ namespace BankAccountForm.BaseClasses
     [Serializable]
     class BankAccountForm<T> : Person, IBalance<T>, IDeposite
     {
-        public BankAccountForm(
-            int idperson, 
-            string fullname, 
-            string adress, 
-            string phonenumber,
-            string group, 
-            int status,
-            T BankAccountForm,
-            decimal balance
-            ) 
-        { 
-            IdPerson = idperson;
-            FullName = fullname;
-            Adress = adress; 
-            PhoneNumber = phonenumber; 
-            Group = group; 
-            Status = status; 
-            IdBankAccountForm = BankAccountForm;
-            Balance = balance;
-         }
         public BankAccountForm()
         {
 

@@ -145,59 +145,59 @@ namespace BankAccountFormForm.BaseClasses
             deserializerClass.itteration = 0;
         }
 
-        public void AddNewAccount()
-        {
-            BankAccountForm<int> BankAccountForm = new BankAccountForm<int>();
-            var i = getQuantityDirectoryFile.GetQuantityDataFile()-1;
+        //public void AddNewAccount()
+        //{
+        //    BankAccountForm<int> BankAccountForm = new BankAccountForm<int>();
+        //    var i = getQuantityDirectoryFile.GetQuantityDataFile()-1;
 
-            try
-            {
-                Console.WriteLine("[DI Finance] >> Введите данные нового аккаунта:");
-                Console.WriteLine("");
-                Console.WriteLine("[DI Finance] >> Введите логин для нового пользователя:");
-                BankAccountForm.Login = Console.ReadLine();
+        //    try
+        //    {
+        //        Console.WriteLine("[DI Finance] >> Введите данные нового аккаунта:");
+        //        Console.WriteLine("");
+        //        Console.WriteLine("[DI Finance] >> Введите логин для нового пользователя:");
+        //        BankAccountForm.Login = Console.ReadLine();
 
-                Console.WriteLine("[DI Finance] >> Введите пароль пользователя:");
-                BankAccountForm.Password = Console.ReadLine();
+        //        Console.WriteLine("[DI Finance] >> Введите пароль пользователя:");
+        //        BankAccountForm.Password = Console.ReadLine();
 
-                Console.WriteLine("[DI Finance] >> Внесите роль пользователя \n 1-user, 2-worker, 3-operator, 4 - mainoperator, 5-manager, 6-mainManager, 7-director");
-                BankAccountForm.RoleUser = byte.Parse(Console.ReadLine());
+        //        Console.WriteLine("[DI Finance] >> Внесите роль пользователя \n 1-user, 2-worker, 3-operator, 4 - mainoperator, 5-manager, 6-mainManager, 7-director");
+        //        BankAccountForm.RoleUser = byte.Parse(Console.ReadLine());
 
-                Console.WriteLine("[DI Finance] >> Введите роль в системе (1-user  2-moderator 3-admin):");
-                BankAccountForm.RoleUserSystemAdmin = byte.Parse(Console.ReadLine());
+        //        Console.WriteLine("[DI Finance] >> Введите роль в системе (1-user  2-moderator 3-admin):");
+        //        BankAccountForm.RoleUserSystemAdmin = byte.Parse(Console.ReadLine());
 
-                Console.WriteLine("[DI Finance] >> Внесите адресс:");
-                BankAccountForm.Adress = Console.ReadLine();
+        //        Console.WriteLine("[DI Finance] >> Внесите адресс:");
+        //        BankAccountForm.Adress = Console.ReadLine();
 
-                Console.WriteLine("[DI Finance] >> Внесите ФИО");
-                BankAccountForm.FullName = Console.ReadLine();
+        //        Console.WriteLine("[DI Finance] >> Внесите ФИО");
+        //        BankAccountForm.FullName = Console.ReadLine();
 
-                Console.WriteLine("[DI Finance] >> Введите групу пользователя: (0-для всех)");
-                BankAccountForm.Group = Console.ReadLine();
+        //        Console.WriteLine("[DI Finance] >> Введите групу пользователя: (0-для всех)");
+        //        BankAccountForm.Group = Console.ReadLine();
 
-                BankAccountForm.IdPerson = i ;
+        //        BankAccountForm.IdPerson = i ;
 
-                Console.WriteLine("[DI Finance] >> Внесите телефонный номер");
-                BankAccountForm.PhoneNumber = Console.ReadLine();
+        //        Console.WriteLine("[DI Finance] >> Внесите телефонный номер");
+        //        BankAccountForm.PhoneNumber = Console.ReadLine();
 
-                Console.WriteLine("[DI Finance] >> Введите статус пользователя 0-обычный, 1-привелегии, 2-суперпривелегии, 99-основатель, 60-забанен");
-                BankAccountForm.Status = Int32.Parse(Console.ReadLine());
+        //        Console.WriteLine("[DI Finance] >> Введите статус пользователя 0-обычный, 1-привелегии, 2-суперпривелегии, 99-основатель, 60-забанен");
+        //        BankAccountForm.Status = Int32.Parse(Console.ReadLine());
 
-                BankAccountForm.IdBankAccountForm = i;
+        //        BankAccountForm.IdBankAccountForm = i;
 
-                Console.WriteLine("[DI Finance] >> Внесите баланс пользователя, по умолчанию 0,00");
-                BankAccountForm.Balance = decimal.Parse(Console.ReadLine());
-            }
-            catch (Exception e)
-            {
-                ErrorMessage(e);
-            }
+        //        Console.WriteLine("[DI Finance] >> Внесите баланс пользователя, по умолчанию 0,00");
+        //        BankAccountForm.Balance = decimal.Parse(Console.ReadLine());
+        //    }
+        //    catch (Exception e)
+        //    {
+        //        ErrorMessage(e);
+        //    }
 
-            Console.WriteLine("[DI Finance SYSTEM] >> Сохоанение данных в файл....");
+        //    Console.WriteLine("[DI Finance SYSTEM] >> Сохоанение данных в файл....");
 
-            serializerClass.Serializ(BankAccountForm, constantClassData.FileNameBinary);
-            Console.WriteLine("[DI Finance SYSTEM] >> Данные успешно сохранены!");
-            ShowDataBankAccountFormAll(BankAccountForm);
-        }
+        //    serializerClass.Serializ(BankAccountForm, constantClassData.FileNameBinary);
+        //    Console.WriteLine("[DI Finance SYSTEM] >> Данные успешно сохранены!");
+        //    ShowDataBankAccountFormAll(BankAccountForm);
+        //}
     }
 }

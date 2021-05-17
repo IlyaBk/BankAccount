@@ -16,5 +16,15 @@ namespace BankAccountForm.Forms.AccountForms
         {
             InitializeComponent();
         }
+
+        private void groupBox3_Enter ( object sender, EventArgs e )
+        {
+
+        }
+
+        private void AddAccountForm_Load ( object sender, EventArgs e )
+        {
+
+        }
     }
 }

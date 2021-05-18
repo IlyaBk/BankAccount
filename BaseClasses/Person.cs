@@ -20,10 +20,10 @@ namespace BankAccountForm.BaseClasses
         public string PhoneNumber1 { get; set; }
         public string PhoneNumber2 { get; set; }
         //группы - 1 - клиенты, 2  - сотрудники, 3 - прочее
-        public string Group { get; set; }
+        public byte Group { get; set; }
 
-        //статус 0-обычный, 1-привелегии, 2-суперпривелегии, 99-основатель, 60-забанен
-        public int Status { get; set; }
+        //статус 0-обычный, 1-добавлении, 2-суперпривелегии, 99-основатель, 60-забанен
+        public byte Status { get; set; }
         public string PersonDescription { get; set; }
         public string PersonDateCreation { get; set; }
 

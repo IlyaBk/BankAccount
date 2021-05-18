@@ -1,7 +1,8 @@
-﻿using BankAccountForm.Encryptor;
+﻿using BankAccountForm.Forms;
 using BankAccountForm.Utilites;
 using BankAccountForm.Views;
 using System;
+using System.Drawing;
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.Security.Cryptography;
@@ -26,6 +27,7 @@ namespace BankAccountForm.Data.SaveData
         //передаём объект серриализации и путь
         public async  void Serializ ( object obj, string FilePath)
         {
+            NotificationForm notificationForm = new NotificationForm( );
             GetQuantityDirectoryFile getquantityDirectoryFile = new GetQuantityDirectoryFile();
             BinaryFormatter serializer = new BinaryFormatter( );
             try
@@ -39,11 +41,14 @@ namespace BankAccountForm.Data.SaveData
                         SaveFileStream.Close( );
                     }
                 }
-                else { Console.WriteLine("Ошибка доступа к дирректории или файлу!"); }
+                else 
+                {
+                    notificationForm.ShowTextNotification( "Ошибка доступа к дирректории или файлу!", "", Color.Red, Color.Red );
+                }
             }
             catch (Exception e)
             {
-                Console.WriteLine( $"Ошибка серриализации! Ошибка:\n {e}");
+                notificationForm.ShowTextNotification( "Ошибка серриализации!", e.ToString(), Color.Red, Color.Red );
                 StatusSerializ = false; 
             }
         }

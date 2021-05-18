@@ -6,7 +6,7 @@ using BankAccountForm.Data;
 using BankAccountForm.Utilites;
 using BankAccountForm.Views;
 
-namespace BankAccountFormForm.BaseClasses
+namespace BankAccountForm.BaseClasses
 {
     class MainProgram:Consoles
     {

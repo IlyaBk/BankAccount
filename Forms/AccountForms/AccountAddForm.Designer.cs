@@ -1,7 +1,7 @@
 ﻿
 namespace BankAccountForm.Forms.AccountForms
 {
-    partial class AddAccountForm
+    partial class AccountAddForm
     {
         /// <summary>
         /// Required designer variable.
@@ -29,15 +29,19 @@ namespace BankAccountForm.Forms.AccountForms
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
+            this.label22 = new System.Windows.Forms.Label();
+            this.comboBox_Status = new System.Windows.Forms.ComboBox();
+            this.label21 = new System.Windows.Forms.Label();
+            this.comboBox_Group = new System.Windows.Forms.ComboBox();
             this.textBox_PersonDescription = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label19 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
@@ -48,6 +52,8 @@ namespace BankAccountForm.Forms.AccountForms
             this.textBox_PhoneNumber1 = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.label20 = new System.Windows.Forms.Label();
+            this.textBox_AdressRegion = new System.Windows.Forms.TextBox();
             this.textBox_AdressCountry = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -83,23 +89,20 @@ namespace BankAccountForm.Forms.AccountForms
             this.Item2 = new System.Windows.Forms.ToolStripMenuItem();
             this.Item3 = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.button_AddAccount = new System.Windows.Forms.Button();
-            this.authorizDataBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.toolStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.groupBox7.SuspendLayout();
             this.groupBox6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox5.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.authorizDataBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // toolStrip1
@@ -107,16 +110,16 @@ namespace BankAccountForm.Forms.AccountForms
             this.toolStrip1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripLabel1});
-            this.toolStrip1.Location = new System.Drawing.Point(0, 400);
+            this.toolStrip1.Location = new System.Drawing.Point(0, 471);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(525, 25);
+            this.toolStrip1.Size = new System.Drawing.Size(523, 25);
             this.toolStrip1.TabIndex = 1;
             this.toolStrip1.Text = "toolStrip1";
             // 
             // toolStripLabel1
             // 
             this.toolStripLabel1.Name = "toolStripLabel1";
-            this.toolStripLabel1.Size = new System.Drawing.Size(76, 22);
+            this.toolStripLabel1.Size = new System.Drawing.Size(77, 22);
             this.toolStripLabel1.Text = "FILE SYSTEM:";
             // 
             // groupBox1
@@ -126,7 +129,7 @@ namespace BankAccountForm.Forms.AccountForms
             this.groupBox1.ForeColor = System.Drawing.Color.Gray;
             this.groupBox1.Location = new System.Drawing.Point(3, 26);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(403, 376);
+            this.groupBox1.Size = new System.Drawing.Size(403, 446);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "ДОБАВЛЕНИЕ НОВОГО АККАУНТА ПОЛЬЗОВАТЕЛЯ";
@@ -140,26 +143,84 @@ namespace BankAccountForm.Forms.AccountForms
             this.panel1.Controls.Add(this.groupBox3);
             this.panel1.Location = new System.Drawing.Point(4, 18);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(398, 354);
+            this.panel1.Size = new System.Drawing.Size(398, 418);
             this.panel1.TabIndex = 0;
             // 
             // groupBox7
             // 
+            this.groupBox7.Controls.Add(this.label22);
+            this.groupBox7.Controls.Add(this.comboBox_Status);
+            this.groupBox7.Controls.Add(this.label21);
+            this.groupBox7.Controls.Add(this.comboBox_Group);
             this.groupBox7.Controls.Add(this.textBox_PersonDescription);
             this.groupBox7.Controls.Add(this.label16);
-            this.groupBox7.Location = new System.Drawing.Point(3, 242);
+            this.groupBox7.Location = new System.Drawing.Point(3, 244);
             this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Size = new System.Drawing.Size(260, 110);
+            this.groupBox7.Size = new System.Drawing.Size(260, 175);
             this.groupBox7.TabIndex = 31;
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "ДОПОЛНИТЕЛЬНЯ ИНФОРМАЦИЯ";
             // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.BackColor = System.Drawing.Color.Transparent;
+            this.label22.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label22.ForeColor = System.Drawing.Color.DimGray;
+            this.label22.Location = new System.Drawing.Point(136, 15);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(48, 17);
+            this.label22.TabIndex = 30;
+            this.label22.Text = "Статус";
+            // 
+            // comboBox_Status
+            // 
+            this.comboBox_Status.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.comboBox_Status.FormattingEnabled = true;
+            this.comboBox_Status.Items.AddRange(new object[] {
+            "Обычный ",
+            "Привелегии",
+            "Основатель",
+            "Мут",
+            "Забанен"});
+            this.comboBox_Status.Location = new System.Drawing.Point(132, 32);
+            this.comboBox_Status.Margin = new System.Windows.Forms.Padding(1);
+            this.comboBox_Status.Name = "comboBox_Status";
+            this.comboBox_Status.Size = new System.Drawing.Size(125, 23);
+            this.comboBox_Status.TabIndex = 29;
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.BackColor = System.Drawing.Color.Transparent;
+            this.label21.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label21.ForeColor = System.Drawing.Color.DimGray;
+            this.label21.Location = new System.Drawing.Point(6, 15);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(51, 17);
+            this.label21.TabIndex = 28;
+            this.label21.Text = "Группа";
+            // 
+            // comboBox_Group
+            // 
+            this.comboBox_Group.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.comboBox_Group.FormattingEnabled = true;
+            this.comboBox_Group.Items.AddRange(new object[] {
+            "Клиенты ",
+            "Сотрудники",
+            "Дополнительно"});
+            this.comboBox_Group.Location = new System.Drawing.Point(2, 32);
+            this.comboBox_Group.Margin = new System.Windows.Forms.Padding(1);
+            this.comboBox_Group.Name = "comboBox_Group";
+            this.comboBox_Group.Size = new System.Drawing.Size(125, 23);
+            this.comboBox_Group.TabIndex = 27;
+            // 
             // textBox_PersonDescription
             // 
-            this.textBox_PersonDescription.Location = new System.Drawing.Point(9, 33);
+            this.textBox_PersonDescription.Location = new System.Drawing.Point(2, 78);
             this.textBox_PersonDescription.Multiline = true;
             this.textBox_PersonDescription.Name = "textBox_PersonDescription";
-            this.textBox_PersonDescription.Size = new System.Drawing.Size(242, 71);
+            this.textBox_PersonDescription.Size = new System.Drawing.Size(255, 90);
             this.textBox_PersonDescription.TabIndex = 26;
             // 
             // label16
@@ -168,7 +229,7 @@ namespace BankAccountForm.Forms.AccountForms
             this.label16.BackColor = System.Drawing.Color.Transparent;
             this.label16.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label16.ForeColor = System.Drawing.Color.DimGray;
-            this.label16.Location = new System.Drawing.Point(6, 15);
+            this.label16.Location = new System.Drawing.Point(6, 61);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(89, 17);
             this.label16.TabIndex = 25;
@@ -176,6 +237,7 @@ namespace BankAccountForm.Forms.AccountForms
             // 
             // groupBox6
             // 
+            this.groupBox6.Controls.Add(this.pictureBox1);
             this.groupBox6.Controls.Add(this.textBox1);
             this.groupBox6.Controls.Add(this.label19);
             this.groupBox6.Controls.Add(this.label18);
@@ -186,12 +248,22 @@ namespace BankAccountForm.Forms.AccountForms
             this.groupBox6.Controls.Add(this.textBox_PhoneNumber1);
             this.groupBox6.Controls.Add(this.label15);
             this.groupBox6.ForeColor = System.Drawing.Color.Black;
-            this.groupBox6.Location = new System.Drawing.Point(269, 143);
+            this.groupBox6.Location = new System.Drawing.Point(266, 143);
             this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(127, 202);
+            this.groupBox6.Size = new System.Drawing.Size(127, 276);
             this.groupBox6.TabIndex = 30;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Прочее";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::BankAccountForm.Properties.Resources.contactlist_theuser_802;
+            this.pictureBox1.Location = new System.Drawing.Point(9, 174);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(99, 95);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 3;
+            this.pictureBox1.TabStop = false;
             // 
             // textBox1
             // 
@@ -286,6 +358,8 @@ namespace BankAccountForm.Forms.AccountForms
             // 
             // groupBox5
             // 
+            this.groupBox5.Controls.Add(this.label20);
+            this.groupBox5.Controls.Add(this.textBox_AdressRegion);
             this.groupBox5.Controls.Add(this.textBox_AdressCountry);
             this.groupBox5.Controls.Add(this.label7);
             this.groupBox5.Controls.Add(this.label9);
@@ -306,12 +380,32 @@ namespace BankAccountForm.Forms.AccountForms
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "АДРЕСС";
             // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.BackColor = System.Drawing.Color.Transparent;
+            this.label20.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label20.ForeColor = System.Drawing.Color.DimGray;
+            this.label20.Location = new System.Drawing.Point(174, 14);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(52, 17);
+            this.label20.TabIndex = 28;
+            this.label20.Text = "Регион";
+            // 
+            // textBox_AdressRegion
+            // 
+            this.textBox_AdressRegion.Location = new System.Drawing.Point(176, 32);
+            this.textBox_AdressRegion.Multiline = true;
+            this.textBox_AdressRegion.Name = "textBox_AdressRegion";
+            this.textBox_AdressRegion.Size = new System.Drawing.Size(80, 22);
+            this.textBox_AdressRegion.TabIndex = 27;
+            // 
             // textBox_AdressCountry
             // 
-            this.textBox_AdressCountry.Location = new System.Drawing.Point(2, 33);
+            this.textBox_AdressCountry.Location = new System.Drawing.Point(2, 32);
             this.textBox_AdressCountry.Multiline = true;
             this.textBox_AdressCountry.Name = "textBox_AdressCountry";
-            this.textBox_AdressCountry.Size = new System.Drawing.Size(125, 22);
+            this.textBox_AdressCountry.Size = new System.Drawing.Size(86, 22);
             this.textBox_AdressCountry.TabIndex = 12;
             // 
             // label7
@@ -332,7 +426,7 @@ namespace BankAccountForm.Forms.AccountForms
             this.label9.BackColor = System.Drawing.Color.Transparent;
             this.label9.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label9.ForeColor = System.Drawing.Color.DimGray;
-            this.label9.Location = new System.Drawing.Point(134, 16);
+            this.label9.Location = new System.Drawing.Point(86, 14);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(54, 17);
             this.label9.TabIndex = 18;
@@ -343,15 +437,15 @@ namespace BankAccountForm.Forms.AccountForms
             this.textBox_AdressNumberApartment.Location = new System.Drawing.Point(132, 112);
             this.textBox_AdressNumberApartment.Multiline = true;
             this.textBox_AdressNumberApartment.Name = "textBox_AdressNumberApartment";
-            this.textBox_AdressNumberApartment.Size = new System.Drawing.Size(124, 22);
+            this.textBox_AdressNumberApartment.Size = new System.Drawing.Size(125, 22);
             this.textBox_AdressNumberApartment.TabIndex = 26;
             // 
             // textBox_AdressPostcode
             // 
-            this.textBox_AdressPostcode.Location = new System.Drawing.Point(132, 33);
+            this.textBox_AdressPostcode.Location = new System.Drawing.Point(89, 32);
             this.textBox_AdressPostcode.Multiline = true;
             this.textBox_AdressPostcode.Name = "textBox_AdressPostcode";
-            this.textBox_AdressPostcode.Size = new System.Drawing.Size(125, 22);
+            this.textBox_AdressPostcode.Size = new System.Drawing.Size(86, 22);
             this.textBox_AdressPostcode.TabIndex = 17;
             // 
             // label6
@@ -391,7 +485,7 @@ namespace BankAccountForm.Forms.AccountForms
             this.textBox_AdressStreet.Location = new System.Drawing.Point(133, 72);
             this.textBox_AdressStreet.Multiline = true;
             this.textBox_AdressStreet.Name = "textBox_AdressStreet";
-            this.textBox_AdressStreet.Size = new System.Drawing.Size(125, 22);
+            this.textBox_AdressStreet.Size = new System.Drawing.Size(124, 22);
             this.textBox_AdressStreet.TabIndex = 21;
             // 
             // label11
@@ -435,7 +529,7 @@ namespace BankAccountForm.Forms.AccountForms
             this.groupBox4.Controls.Add(this.textBox_name3);
             this.groupBox4.Controls.Add(this.label8);
             this.groupBox4.ForeColor = System.Drawing.Color.Black;
-            this.groupBox4.Location = new System.Drawing.Point(269, 5);
+            this.groupBox4.Location = new System.Drawing.Point(266, 5);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(127, 139);
             this.groupBox4.TabIndex = 28;
@@ -549,16 +643,34 @@ namespace BankAccountForm.Forms.AccountForms
             // 
             this.comboBox_roleSystem.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.comboBox_roleSystem.FormattingEnabled = true;
+            this.comboBox_roleSystem.Items.AddRange(new object[] {
+            "Пользователь",
+            "Модератор",
+            "Администратор",
+            "Root"});
             this.comboBox_roleSystem.Location = new System.Drawing.Point(2, 70);
             this.comboBox_roleSystem.Margin = new System.Windows.Forms.Padding(1);
             this.comboBox_roleSystem.Name = "comboBox_roleSystem";
             this.comboBox_roleSystem.Size = new System.Drawing.Size(125, 23);
             this.comboBox_roleSystem.TabIndex = 11;
+            this.comboBox_roleSystem.SelectedIndexChanged += new System.EventHandler(this.comboBox_roleSystem_SelectedIndexChanged);
             // 
             // comboBox_roleUser
             // 
             this.comboBox_roleUser.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.comboBox_roleUser.FormattingEnabled = true;
+            this.comboBox_roleUser.Items.AddRange(new object[] {
+            "Пользователь",
+            "Работник",
+            "Опреатор ",
+            "Гл. оператор",
+            "Manager",
+            "MainManager",
+            "Director",
+            "Бухгалтер",
+            "Гл. Бухгалтер",
+            "Аудитор",
+            "Financial analyst"});
             this.comboBox_roleUser.Location = new System.Drawing.Point(132, 70);
             this.comboBox_roleUser.Margin = new System.Windows.Forms.Padding(1);
             this.comboBox_roleUser.Name = "comboBox_roleUser";
@@ -617,7 +729,7 @@ namespace BankAccountForm.Forms.AccountForms
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(7, 3, 0, 3);
             this.menuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
-            this.menuStrip1.Size = new System.Drawing.Size(525, 25);
+            this.menuStrip1.Size = new System.Drawing.Size(523, 25);
             this.menuStrip1.TabIndex = 3;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -636,7 +748,7 @@ namespace BankAccountForm.Forms.AccountForms
             this.вЫХОДToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.вЫХОДToolStripMenuItem.ForeColor = System.Drawing.Color.Gray;
             this.вЫХОДToolStripMenuItem.Name = "вЫХОДToolStripMenuItem";
-            this.вЫХОДToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
+            this.вЫХОДToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
             this.вЫХОДToolStripMenuItem.Text = "ВЫХОД";
             // 
             // пРОВЕРИТЬФАЙЛЫToolStripMenuItem
@@ -644,7 +756,7 @@ namespace BankAccountForm.Forms.AccountForms
             this.пРОВЕРИТЬФАЙЛЫToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.пРОВЕРИТЬФАЙЛЫToolStripMenuItem.ForeColor = System.Drawing.Color.Gray;
             this.пРОВЕРИТЬФАЙЛЫToolStripMenuItem.Name = "пРОВЕРИТЬФАЙЛЫToolStripMenuItem";
-            this.пРОВЕРИТЬФАЙЛЫToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
+            this.пРОВЕРИТЬФАЙЛЫToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
             this.пРОВЕРИТЬФАЙЛЫToolStripMenuItem.Text = "ПРОВЕРИТЬ ФАЙЛЫ";
             // 
             // Item2
@@ -663,7 +775,6 @@ namespace BankAccountForm.Forms.AccountForms
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.pictureBox1);
             this.groupBox2.Controls.Add(this.button2);
             this.groupBox2.Controls.Add(this.button1);
             this.groupBox2.Controls.Add(this.button_AddAccount);
@@ -671,26 +782,16 @@ namespace BankAccountForm.Forms.AccountForms
             this.groupBox2.ForeColor = System.Drawing.Color.Gray;
             this.groupBox2.Location = new System.Drawing.Point(407, 26);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(115, 376);
+            this.groupBox2.Size = new System.Drawing.Size(115, 446);
             this.groupBox2.TabIndex = 4;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "УПРАВЛЕНИЕ";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::BankAccountForm.Properties.Resources.contactlist_theuser_802;
-            this.pictureBox1.Location = new System.Drawing.Point(18, 251);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(88, 89);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 3;
-            this.pictureBox1.TabStop = false;
             // 
             // button2
             // 
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button2.Location = new System.Drawing.Point(6, 346);
+            this.button2.Location = new System.Drawing.Point(5, 416);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(105, 24);
             this.button2.TabIndex = 2;
@@ -721,17 +822,14 @@ namespace BankAccountForm.Forms.AccountForms
             this.button_AddAccount.Text = "СОХРАНИТЬ";
             this.button_AddAccount.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.button_AddAccount.UseVisualStyleBackColor = true;
+            this.button_AddAccount.Click += new System.EventHandler(this.button_AddAccount_Click);
             // 
-            // authorizDataBindingSource
-            // 
-            this.authorizDataBindingSource.DataSource = typeof(BankAccountForm.BaseClasses.AuthorizData);
-            // 
-            // AddAccountForm
+            // AccountAddForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FloralWhite;
-            this.ClientSize = new System.Drawing.Size(525, 425);
+            this.ClientSize = new System.Drawing.Size(523, 496);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.groupBox1);
@@ -739,7 +837,7 @@ namespace BankAccountForm.Forms.AccountForms
             this.ForeColor = System.Drawing.Color.Gray;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.MaximizeBox = false;
-            this.Name = "AddAccountForm";
+            this.Name = "AccountAddForm";
             this.Text = "DI Finances   >>   АККАУНТЫ > ДОБАВИТЬ АККАУНТ";
             this.Load += new System.EventHandler(this.AddAccountForm_Load);
             this.toolStrip1.ResumeLayout(false);
@@ -750,6 +848,7 @@ namespace BankAccountForm.Forms.AccountForms
             this.groupBox7.PerformLayout();
             this.groupBox6.ResumeLayout(false);
             this.groupBox6.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
             this.groupBox4.ResumeLayout(false);
@@ -759,8 +858,6 @@ namespace BankAccountForm.Forms.AccountForms
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.authorizDataBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -824,6 +921,11 @@ namespace BankAccountForm.Forms.AccountForms
         internal System.Windows.Forms.TextBox textBox1;
         internal System.Windows.Forms.ComboBox comboBox_roleSystem;
         internal System.Windows.Forms.ComboBox comboBox_roleUser;
-        private System.Windows.Forms.BindingSource authorizDataBindingSource;
+        private System.Windows.Forms.Label label20;
+        internal System.Windows.Forms.TextBox textBox_AdressRegion;
+        private System.Windows.Forms.Label label21;
+        internal System.Windows.Forms.ComboBox comboBox_Group;
+        private System.Windows.Forms.Label label22;
+        internal System.Windows.Forms.ComboBox comboBox_Status;
     }
 }

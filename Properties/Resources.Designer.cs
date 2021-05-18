@@ -73,6 +73,16 @@ namespace BankAccountForm.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap contactlist_theuser_8021 {
+            get {
+                object obj = ResourceManager.GetObject("contactlist_theuser_8021", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap user_add_12818 {
             get {
                 object obj = ResourceManager.GetObject("user_add_12818", resourceCulture);

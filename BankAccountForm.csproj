@@ -96,11 +96,11 @@
     <Compile Include="Forms\AccountForms\AccountMainForm.Designer.cs">
       <DependentUpon>AccountMainForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\AccountForms\AddAccountForm.cs">
+    <Compile Include="Forms\AccountForms\AccountAddForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\AccountForms\AddAccountForm.Designer.cs">
-      <DependentUpon>AddAccountForm.cs</DependentUpon>
+    <Compile Include="Forms\AccountForms\AccountAddForm.Designer.cs">
+      <DependentUpon>AccountAddForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\AuthorizForms\AuthorizForm.cs">
       <SubType>Form</SubType>
@@ -114,6 +114,12 @@
     <Compile Include="Forms\MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\NotificationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\NotificationForm.Designer.cs">
+      <DependentUpon>NotificationForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Interfaces\IBalance.cs" />
     <Compile Include="Interfaces\IDeposite.cs" />
     <Compile Include="Logic\LogicAddAccount.cs" />
@@ -124,14 +130,17 @@
     <EmbeddedResource Include="Forms\AccountForms\AccountMainForm.resx">
       <DependentUpon>AccountMainForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\AccountForms\AddAccountForm.resx">
-      <DependentUpon>AddAccountForm.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\AccountForms\AccountAddForm.resx">
+      <DependentUpon>AccountAddForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\AuthorizForms\AuthorizForm.resx">
       <DependentUpon>AuthorizForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\NotificationForm.resx">
+      <DependentUpon>NotificationForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -144,7 +153,6 @@
       <DesignTime>True</DesignTime>
     </Compile>
     <None Include="packages.config" />
-    <None Include="Properties\DataSources\BankAccountForm.BaseClasses.AuthorizData.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -164,6 +172,8 @@
   <ItemGroup>
     <None Include="Resources\contactlist_theuser_802.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\contactlist_theuser_8021.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

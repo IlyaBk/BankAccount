@@ -1,4 +1,6 @@
-﻿using System;
+﻿using BankAccountForm.Forms;
+using BankAccountForm.Forms.AccountForms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,18 +10,28 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace BankAccountFormForm
+namespace BankAccountForm
 {
-    public partial class Form1 : Form
+    public partial class MainForm : Form
     {
-        public Form1()
+        
+        public MainForm()
         {
             InitializeComponent();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void MainForm_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void pictureBox1_Click ( object sender, EventArgs e)
+        {
+            NotificationForm notificationForm = new NotificationForm( );
+            AccountMainForm accountMainForm = new AccountMainForm( );
+            accountMainForm.Show( );
+            //else notificationForm.ShowTextNotification( "Форма уже открыта!", "", Color.Aqua, Color.Aqua ); 
+            //this.Hide( );
         }
     }
 }

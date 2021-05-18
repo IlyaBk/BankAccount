@@ -12,9 +12,15 @@ namespace BankAccountForm.Forms.AccountForms
 {
     public partial class AccountMainForm : Form
     {
+        AccountAddForm addAccountForm = new AccountAddForm( );
         public AccountMainForm()
         {
             InitializeComponent();
+        }
+
+        private void button_AddAccount_Click ( object sender, EventArgs e )
+        {
+            addAccountForm.Show( );
         }
     }
 }

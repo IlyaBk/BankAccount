@@ -42,10 +42,10 @@ namespace BankAccountForm.Views
                     $"╠ Пароль: {bankAccountform.Password}                  \n" +
                     $"╠ Роль пользователя: {bankAccountform.RoleUser}       \n" +
                     $"╠ Роль в ситеме: {bankAccountform.RoleUserSystemAdmin} \n" +
-                    $"╠ Адресс: {bankAccountform.Adress}                   \n" +
-                    $"╠ ФИО: {bankAccountform.FullName}                    \n" +
+                    //$"╠ Адресс: {bankAccountform.Adress}                   \n" +
+                   // $"╠ ФИО: {bankAccountform.FullName}                    \n" +
                     $"╠ Группа: {bankAccountform.Group}                    \n" +
-                    $"╠ Номер:  {bankAccountform.PhoneNumber}       \n" +
+                    //$"╠ Номер:  {bankAccountform.PhoneNumber}       \n" +
                     $"╠ Статус пользователя: {bankAccountform.Status}      \n" +
                     $"╠ ID Аккаунта: {bankAccountform.IdBankAccountForm}      \n" +
                     $"╠ ID Пользователя: {bankAccountform.IdPerson}        \n" +
@@ -75,7 +75,7 @@ namespace BankAccountForm.Views
                     Console.WriteLine
                     (
                      "╔══════════════════════════════════════════════════╗\n" +
-                    $"╠ ФИО: {bankAccountform.FullName}                     \n" +
+                    //$"╠ ФИО: {bankAccountform.FullName}                     \n" +
                     $"╠ ID Аккаунта:  {bankAccountform.IdBankAccountForm}       \n" +
                     $"╠ ID Пользователя: {bankAccountform.IdPerson}         \n" +
                     $"╠ Баланс: {bankAccountform.Balance}                   \n" +

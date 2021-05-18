@@ -32,9 +32,7 @@ namespace BankAccountForm.Forms.AccountForms
 
         private void button_AddAccount_Click ( object sender, EventArgs e )
         {
-            LogicAddAccount logicAddAccount = new LogicAddAccount( );
-            AccountAddForm addAccountForm = new AccountAddForm( );
-            logicAddAccount.AddAccout( addAccountForm );
+            LogicAddAccount logicAddAccount = new LogicAddAccount(this);
         }
     }
 }

@@ -12,8 +12,6 @@ namespace BankAccountForm.BaseClasses
     {
         public AuthorizData()
         {
-            //GuideUserRoleSystemAdmin guideUserRoleSystemAdmin = new GuideUserRoleSystemAdmin( );
-            //GuideUserRole guideUserRole = new GuideUserRole();
         }
 
         public string Login { get; set; }

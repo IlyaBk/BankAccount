@@ -15,8 +15,6 @@ namespace BankAccountForm.BaseClasses
         {
 
         }
-
-
         public T IdBankAccountForm { get; set; }
         public decimal Balance { get; set; }
 

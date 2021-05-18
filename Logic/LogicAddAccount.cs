@@ -13,42 +13,45 @@ using BankAccountForm.Data;
 
 namespace BankAccountForm.Logic
 {
-    class LogicAddAccount:BankAccountForm<int>
+    class LogicAddAccount
     {
-
-        public LogicAddAccount() {  }
+        public LogicAddAccount(AccountAddForm addAccountForm) 
+        {
+            AddAccout(addAccountForm);
+        }
 
         
         GetQuantityDirectoryFile getQuantityDirectoryFile = new GetQuantityDirectoryFile( );
         SerializerClass serializerClass = new SerializerClass( );
         ConstantClassData constantClassData = new ConstantClassData( );
 
-        public void AddAccout( AccountAddForm addAccountForm )
+        public void AddAccout( AccountAddForm addAccountForm)
         {
+            BankAccountForm<int> bankAccountForm = new BankAccountForm<int>();
             NotificationForm notificationForm = new NotificationForm( );
             try
             {
-                Login = addAccountForm.textBox_login.Text;
-                Password = addAccountForm.textBox_password.Text;
-                RoleUserSystemAdmin = byte.Parse( addAccountForm.comboBox_roleSystem.SelectedIndex.ToString( ) );
-                RoleUser = byte.Parse( addAccountForm.comboBox_roleUser.SelectedIndex.ToString( ) );
-                IdPerson = getQuantityDirectoryFile.GetQuantityDataFile( ) - 1;
-                Name1 = addAccountForm.textBox_name1.Text;
-                Name2 = addAccountForm.textBox_name2.Text;
-                Name3 = addAccountForm.textBox_name3.Text;
-                AdressCountry = addAccountForm.textBox_AdressCountry.Text;
-                AdressRegion = addAccountForm.textBox_AdressRegion.Text;
-                AdressPostcode = addAccountForm.textBox_AdressPostcode.Text;
-                AdressCity = addAccountForm.textBox_AdressCity.Text;
-                AdressStreet = addAccountForm.textBox_AdressStreet.Text;
-                AdressNumberHome = addAccountForm.textBox_AdressNumberHome.Text;
-                AdressNumberApartment = addAccountForm.textBox_AdressNumberApartment.Text;
-                Email = addAccountForm.textBox_Email.Text;
-                PhoneNumber1 = addAccountForm.textBox_PhoneNumber1.Text;
-                Group = byte.Parse( addAccountForm.comboBox_Group.SelectedIndex.ToString( ) );
-                Status = byte.Parse( addAccountForm.comboBox_Status.SelectedIndex.ToString());
+                bankAccountForm.Login = addAccountForm.textBox_login.Text;
+                bankAccountForm.Password = addAccountForm.textBox_password.Text;
+                bankAccountForm.RoleUserSystemAdmin = byte.Parse( addAccountForm.comboBox_roleSystem.SelectedIndex.ToString( ) );
+                bankAccountForm.RoleUser = byte.Parse( addAccountForm.comboBox_roleUser.SelectedIndex.ToString( ) );
+                bankAccountForm.IdPerson = getQuantityDirectoryFile.GetQuantityDataFile() - 1;
+                bankAccountForm.Name1 = addAccountForm.textBox_name1.Text;
+                bankAccountForm.Name2 = addAccountForm.textBox_name2.Text;
+                bankAccountForm.Name3 = addAccountForm.textBox_name3.Text;
+                bankAccountForm.AdressCountry = addAccountForm.textBox_AdressCountry.Text;
+                bankAccountForm.AdressRegion = addAccountForm.textBox_AdressRegion.Text;
+                bankAccountForm.AdressPostcode = addAccountForm.textBox_AdressPostcode.Text;
+                bankAccountForm.AdressCity = addAccountForm.textBox_AdressCity.Text;
+                bankAccountForm.AdressStreet = addAccountForm.textBox_AdressStreet.Text;
+                bankAccountForm.AdressNumberHome = addAccountForm.textBox_AdressNumberHome.Text;
+                bankAccountForm.AdressNumberApartment = addAccountForm.textBox_AdressNumberApartment.Text;
+                bankAccountForm.Email = addAccountForm.textBox_Email.Text;
+                bankAccountForm.PhoneNumber1 = addAccountForm.textBox_PhoneNumber1.Text;
+                bankAccountForm.Group = byte.Parse(addAccountForm.comboBox_Group.SelectedIndex.ToString());
+                bankAccountForm.Status = byte.Parse(addAccountForm.comboBox_Status.SelectedIndex.ToString());
 
-                serializerClass.Serializ( addAccountForm, constantClassData.FileNameBinary );
+                serializerClass.Serializ(bankAccountForm, constantClassData.FileNameBinary );
 
                 notificationForm.ShowTextNotification( "Успешное добавление данных!", "ОК!", Color.Red, Color.Green );
                 notificationForm.Show( );

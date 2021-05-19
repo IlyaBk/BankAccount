@@ -123,6 +123,7 @@
     <Compile Include="Interfaces\IBalance.cs" />
     <Compile Include="Interfaces\IDeposite.cs" />
     <Compile Include="Logic\LogicAddAccount.cs" />
+    <Compile Include="Logic\LogicGetAccount.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Utilites\GetQuantityDirectoryFile.cs" />

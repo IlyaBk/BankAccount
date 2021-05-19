@@ -53,7 +53,7 @@ namespace BankAccountForm.Logic
 
                 serializerClass.Serializ(bankAccountForm, constantClassData.FileNameBinary );
 
-                notificationForm.ShowTextNotification( "Успешное добавление данных!", "ОК!", Color.Red, Color.Green );
+                notificationForm.ShowTextNotification( "Успешное добавление данных!", "ОК!", Color.Green, Color.Green );
                 notificationForm.Show( );
             }
             catch (Exception e)

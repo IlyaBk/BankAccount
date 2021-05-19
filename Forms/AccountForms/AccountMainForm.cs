@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BankAccountForm.BaseClasses;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,7 +14,8 @@ namespace BankAccountForm.Forms.AccountForms
     public partial class AccountMainForm : Form
     {
         AccountAddForm addAccountForm = new AccountAddForm( );
-        public AccountMainForm()
+
+        internal AccountMainForm( )
         {
             InitializeComponent();
         }
@@ -21,6 +23,26 @@ namespace BankAccountForm.Forms.AccountForms
         private void button_AddAccount_Click ( object sender, EventArgs e )
         {
             addAccountForm.Show( );
+        }
+
+        private void AccountMainForm_Load ( object sender, EventArgs e )
+        {
+            
+        }
+
+        internal void DSAddAllData(BankAccountForm<int> bankAccount, int lengthmass)
+        {
+            
+            DGV.DataSource = bankAccount;
+
+            for (int i =0; i<lengthmass; i++ )
+            {
+                DGV.Row[i] 
+            }
+        }
+
+        private void AddDSinDGV ( )
+        {
         }
     }
 }

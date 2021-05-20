@@ -1,4 +1,6 @@
 ﻿using BankAccountForm.BaseClasses;
+using BankAccountForm.Forms.NotificationForms;
+
 using BankAccountForm.Logic;
 using System;
 using System.Collections.Generic;
@@ -22,7 +24,7 @@ namespace BankAccountForm.Forms.AccountForms
         }
 
         NotificationForm notification = new NotificationForm();
-        AccountAddForm addAccountForm = new AccountAddForm();
+        
 
         public bool statusForm { get; set; }
 
@@ -33,7 +35,17 @@ namespace BankAccountForm.Forms.AccountForms
 
         private void button_AddAccount_Click ( object sender, EventArgs e )
         {
-            addAccountForm.Show( );
+            AccountAddForm accountAddForm = new AccountAddForm();
+            
+           // if( accountAddForm.StatusAccountAddForm == false )
+            //{
+                accountAddForm.Show();
+           // }
+           // else
+          //  {
+              //  notification.ShowTextNotificationMini("Форма уже открыта!", Color.Red );
+          //  }
+            
         }
 
         private void AccountMainForm_Load ( object sender, EventArgs e )
@@ -48,9 +60,9 @@ namespace BankAccountForm.Forms.AccountForms
                 BankAccountForm<int> [ ] bankAccountForms = new BankAccountForm<int> [ lengthmass ];
                 bankAccountForms = ( BankAccountForm<int> [ ] ) logicGetAccount;
 
-                DGV.Rows.Add( );
                 for ( int i = 0; i < lengthmass; i++ )
                 {
+                    DGV.Rows.Add( );
                     DGV [ 0, i ].Value = bankAccountForms [ i ].IdPerson;
                     DGV [ 1, i ].Value = bankAccountForms [ i ].Login;
                     DGV [ 2, i ].Value = bankAccountForms [ i ].Name1;

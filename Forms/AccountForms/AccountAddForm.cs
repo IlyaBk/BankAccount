@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using BankAccountForm.Logic;
+using BankAccountForm.Utilites;
 
 namespace BankAccountForm.Forms.AccountForms
 {
@@ -17,8 +18,10 @@ namespace BankAccountForm.Forms.AccountForms
         public AccountAddForm()
         {
             InitializeComponent();
-
+            StatusAccountAddForm = true;
         }
+
+        public bool StatusAccountAddForm { get; set; }
 
         private void AddAccountForm_Load(object sender, EventArgs e)
         {
@@ -33,6 +36,23 @@ namespace BankAccountForm.Forms.AccountForms
         private void button_AddAccount_Click ( object sender, EventArgs e )
         {
             LogicAddAccount logicAddAccount = new LogicAddAccount(this);
+        }
+
+        ~AccountAddForm()
+        {
+            StatusAccountAddForm = false;
+            GetQuantityDirectoryFile getQuantityDirectoryFile = new GetQuantityDirectoryFile();
+
+            LogicGetAccount logicGetAccount = new LogicGetAccount();
+
+            if( getQuantityDirectoryFile.GetQuantityDataFile() > 1 )
+            {
+                logicGetAccount.MethodGetAllData();
+            }
+            else
+            {
+                logicGetAccount.MethodGetNoData();
+            }
         }
     }
 }

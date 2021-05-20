@@ -22,7 +22,7 @@ namespace BankAccountForm.Logic
 
         public LogicGetAccount ( )
         {
-            data = new BankAccountForm<int> [ getQuantityDirectoryFile.GetQuantityDataFile( ) ];
+            data = new BankAccountForm<int> [ getQuantityDirectoryFile.GetQuantityDataFile( )-1];
         }
 
         public BankAccountForm<int> this [ int index ]
@@ -42,8 +42,13 @@ namespace BankAccountForm.Logic
             deserializerClass.itteration = 0;
 
             AccountMainForm accountMainForm = new AccountMainForm( BankAccountForm.data, lengthMass );
-
             accountMainForm.Show( );
+        }
+
+        public void MethodGetNoData()
+        {
+            AccountMainForm accountMainForm = new AccountMainForm();
+            accountMainForm.Show();
         }
 
 

@@ -8,24 +8,24 @@ using System.Runtime.Serialization.Formatters.Binary;
 using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
+using BankAccountForm.Forms.NotificationForms;
+using System.Drawing;
 
 namespace BankAccountForm.Data.GetData
 {
     //класс дессериализации
     class DeserializerClass
     {
-        Consoles consoles;
-        GetQuantityDirectoryFile getQuantityDirectoryFile;
-        public DeserializerClass ( )
-        {
+        public DeserializerClass ( ) {}
 
-        }
+        NotificationForm notificationForm = new NotificationForm();
 
         public bool StatusDeserializ { get; set; }
         public int itteration { get; set; }
         public object obj { get; set; }
         public object Deserializ ( string FilePath)
         {
+
             BinaryFormatter deserializer = new BinaryFormatter( );
             try
             {
@@ -40,14 +40,23 @@ namespace BankAccountForm.Data.GetData
                     StatusDeserializ = true;
                 }
                 else 
-                { 
-                    Console.WriteLine("Ошибка доступа к дирректории или файлу!"); 
+                {
+                    notificationForm.ShowTextNotification
+                        ("Ошибка доступа к дирректории или файлу!",
+                        "", 
+                        Color.Red,
+                        Color.Red);
                 }
             }
             catch(Exception e)
             {
-                if (e == null) consoles.ErrorMessage( e );
-                StatusDeserializ = true;
+                if( e == null )
+                    notificationForm.ShowTextNotification
+                        ("Ошибка дессириализации из бинара!",
+                        e.ToString(), 
+                        Color.Red,
+                        Color.Red);
+
             }
             return obj;
         }

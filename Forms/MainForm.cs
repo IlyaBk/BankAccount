@@ -1,6 +1,7 @@
 ﻿using BankAccountForm.Forms;
 using BankAccountForm.Forms.AccountForms;
 using BankAccountForm.Logic;
+using BankAccountForm.Utilites;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -20,6 +21,7 @@ namespace BankAccountForm
         {
             InitializeComponent();
         }
+        GetQuantityDirectoryFile getQuantityDirectoryFile = new GetQuantityDirectoryFile();
 
         private void MainForm_Load(object sender, EventArgs e)
         {
@@ -27,24 +29,17 @@ namespace BankAccountForm
         }
 
         private void pictureBox1_Click ( object sender, EventArgs e)
-        {
+        { 
             LogicGetAccount logicGetAccount = new LogicGetAccount( );
 
-            logicGetAccount.MethodGetAllData( );
-
-            //if ( accountMainForm.St )
-            //{
-               // accountMainForm.Show( );
-            //}
-            //else 
-            //{ 
-            //    notificationForm.ShowTextNotification
-            //        ( "Форма уже открыта!", 
-            //        "Форма добавления пользователя уже открыта", 
-            //        Color.Red,
-            //        Color.Red ); 
-            //}
-            //this.Hide( );
+            if( getQuantityDirectoryFile.GetQuantityDataFile() > 1 )
+            { 
+                logicGetAccount.MethodGetAllData( );
+            }
+            else
+            {
+                logicGetAccount.MethodGetNoData();
+            }
         }
     }
 }

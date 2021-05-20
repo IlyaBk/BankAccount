@@ -114,10 +114,10 @@
     <Compile Include="Forms\MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\NotificationForm.cs">
+    <Compile Include="Forms\NotificationForms\NotificationForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\NotificationForm.Designer.cs">
+    <Compile Include="Forms\NotificationForms\NotificationForm.Designer.cs">
       <DependentUpon>NotificationForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Interfaces\IBalance.cs" />
@@ -140,7 +140,7 @@
     <EmbeddedResource Include="Forms\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\NotificationForm.resx">
+    <EmbeddedResource Include="Forms\NotificationForms\NotificationForm.resx">
       <DependentUpon>NotificationForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -176,5 +176,6 @@
   <ItemGroup>
     <None Include="Resources\contactlist_theuser_8021.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

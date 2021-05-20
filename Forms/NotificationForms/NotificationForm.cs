@@ -9,13 +9,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace BankAccountForm.Forms
+namespace BankAccountForm.Forms.NotificationForms
 {
     public partial class NotificationForm : Form
     {
         public NotificationForm ( string text1, string text2, Color color1, Color color2 )
         {
-            InitializeComponent( );
+            InitializeComponent();
             ShowTextNotification( text1, text2, color1, color2 );
         }
         public NotificationForm ( )
@@ -31,6 +31,14 @@ namespace BankAccountForm.Forms
 
             textBox_text1.Text = text1;
             richTextBox_text2.Text = text2;
+        }
+        public void ShowTextNotificationMini(string text1, Color color1)
+        {
+            InitializeComponent();
+            textBox_text1.ForeColor = color1;
+
+            textBox_text1.Text = text1;
+            richTextBox_text2.Visible = false;
         }
 
         private void NotificationForm_Load ( object sender, EventArgs e )
@@ -54,7 +62,6 @@ namespace BankAccountForm.Forms
                 streamWriter.WriteLineAsync(richTextBox_text2.Text );
                 streamWriter.Close( );
             }
-
         }
 
         private void button2_Click ( object sender, EventArgs e )

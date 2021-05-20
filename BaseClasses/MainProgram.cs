@@ -136,6 +136,7 @@ namespace BankAccountForm.BaseClasses
             }
             deserializerClass.itteration = 0;
         }
+
         public void MainMethodNoShow(MainProgram BankAccountForm)
         {
             for( int i = 0; i < BankAccountForm.data.Length - 1; i++ )

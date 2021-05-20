@@ -1,5 +1,6 @@
 ﻿using BankAccountForm.Forms;
 using BankAccountForm.Forms.AccountForms;
+using BankAccountForm.Logic;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -27,10 +28,22 @@ namespace BankAccountForm
 
         private void pictureBox1_Click ( object sender, EventArgs e)
         {
-            NotificationForm notificationForm = new NotificationForm( );
-            AccountMainForm accountMainForm = new AccountMainForm( );
-            accountMainForm.Show( );
-            //else notificationForm.ShowTextNotification( "Форма уже открыта!", "", Color.Aqua, Color.Aqua ); 
+            LogicGetAccount logicGetAccount = new LogicGetAccount( );
+
+            logicGetAccount.MethodGetAllData( );
+
+            //if ( accountMainForm.St )
+            //{
+               // accountMainForm.Show( );
+            //}
+            //else 
+            //{ 
+            //    notificationForm.ShowTextNotification
+            //        ( "Форма уже открыта!", 
+            //        "Форма добавления пользователя уже открыта", 
+            //        Color.Red,
+            //        Color.Red ); 
+            //}
             //this.Hide( );
         }
     }

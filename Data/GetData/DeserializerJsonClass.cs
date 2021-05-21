@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BankAccountForm.Data.GetData
+namespace AccountForm.Data.GetData
 {
     class DeserializerJsonClass : ConstantClassData
     {

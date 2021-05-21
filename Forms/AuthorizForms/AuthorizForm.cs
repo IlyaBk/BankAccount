@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace BankAccountForm.Forms.AuthorizForms
+namespace AccountForm.Forms.AuthorizForms
 {
     public partial class AuthorizForm : Form
     {

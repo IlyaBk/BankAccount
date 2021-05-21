@@ -1,4 +1,4 @@
-﻿using BankAccountForm.Views;
+﻿using AccountForm.Views;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -8,7 +8,7 @@ using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BankAccountForm.Data.GetData
+namespace AccountForm.Data.GetData
 {
     //класс дессериализации
     class DeserializerEncryptorClass

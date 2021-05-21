@@ -1,12 +1,12 @@
-﻿using BankAccountForm.Encryptor;
-using BankAccountForm.Views;
+﻿using AccountForm.Encryptor;
+using AccountForm.Views;
 using System;
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.Security.Cryptography;
 using System.Threading.Tasks;
 
-namespace BankAccountForm.Data.SaveData
+namespace AccountForm.Data.SaveData
 {
     //класс ссериализации
     class SerializerEncryptorClass : ConstantClassData

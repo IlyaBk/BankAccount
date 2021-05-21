@@ -1,4 +1,4 @@
-﻿using BankAccountForm.Data;
+﻿using AccountForm.Data;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BankAccountForm.Utilites
+namespace AccountForm.Utilites
 {
     class GetQuantityDirectoryFile: ConstantClassData
     {

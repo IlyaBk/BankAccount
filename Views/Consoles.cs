@@ -1,4 +1,4 @@
-﻿using BankAccountForm.BaseClasses;
+﻿using AccountForm.BaseClasses;
 using System;
 using System.Collections.Generic;
 using System.Globalization;
@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BankAccountForm.Views
+namespace AccountForm.Views
 {
     class Consoles
     {
@@ -25,7 +25,7 @@ namespace BankAccountForm.Views
         }
 
         //вывод данных об аккаунте
-        internal void ShowDataBankAccountFormAll(BankAccountForm<int> bankAccountform )
+        internal void ShowDataAccountFormAll(AccountForm<int> bankAccountform )
         {
             try
             {
@@ -44,10 +44,10 @@ namespace BankAccountForm.Views
                     $"╠ Роль в ситеме: {bankAccountform.RoleUserSystemAdmin} \n" +
                     //$"╠ Адресс: {bankAccountform.Adress}                   \n" +
                    // $"╠ ФИО: {bankAccountform.FullName}                    \n" +
-                    $"╠ Группа: {bankAccountform.Group}                    \n" +
+                    //$"╠ Группа: {bankAccountform.Group}                    \n" +
                     //$"╠ Номер:  {bankAccountform.PhoneNumber}       \n" +
-                    $"╠ Статус пользователя: {bankAccountform.Status}      \n" +
-                    $"╠ ID Аккаунта: {bankAccountform.IdBankAccountForm}      \n" +
+                   // $"╠ Статус пользователя: {bankAccountform.Status}      \n" +
+                    $"╠ ID Аккаунта: {bankAccountform.IdAccountForm}      \n" +
                     $"╠ ID Пользователя: {bankAccountform.IdPerson}        \n" +
                     $"╠ Баланс: {bankAccountform.Balance}               \n" +
                      "╚══════════════════════════════════════════════════╝\n"
@@ -62,7 +62,7 @@ namespace BankAccountForm.Views
         }
 
         //вывод данных об аккаунте
-        internal void ShowDataBankAccountForm(BankAccountForm<int> bankAccountform)
+        internal void ShowDataAccountForm(AccountForm<int> bankAccountform)
         {
             try
             {
@@ -76,7 +76,7 @@ namespace BankAccountForm.Views
                     (
                      "╔══════════════════════════════════════════════════╗\n" +
                     //$"╠ ФИО: {bankAccountform.FullName}                     \n" +
-                    $"╠ ID Аккаунта:  {bankAccountform.IdBankAccountForm}       \n" +
+                    $"╠ ID Аккаунта:  {bankAccountform.IdAccountForm}       \n" +
                     $"╠ ID Пользователя: {bankAccountform.IdPerson}         \n" +
                     $"╠ Баланс: {bankAccountform.Balance}                   \n" +
                      "╚══════════════════════════════════════════════════╝\n"

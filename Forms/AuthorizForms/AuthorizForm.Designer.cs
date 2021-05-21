@@ -1,5 +1,5 @@
 ﻿
-namespace BankAccountForm.Forms.AuthorizForms
+namespace AccountForm.Forms.AuthorizForms
 {
     partial class AuthorizForm
     {

@@ -5,9 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Text.Json;
 using System.IO;
-using BankAccountForm.Views;
+using AccountForm.Views;
 
-namespace BankAccountForm.Data.SaveData
+namespace AccountForm.Data.SaveData
 {
     class SerializerJsonClass : ConstantClassData
     {

@@ -1,31 +1,34 @@
-﻿using BankAccountForm.Data;
-using BankAccountForm.Data.SaveData;
+﻿using AccountForm.Data;
+using AccountForm.Data.SaveData;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using BankAccountForm.Data.GetData;
-using BankAccountForm.Utilites;
-using BankAccountForm.BaseClasses;
-using BankAccountForm.Forms.AccountForms;
+using AccountForm.Data.GetData;
+using AccountForm.Utilites;
+using AccountForm.BaseClasses;
+using AccountForm.Forms.AccountForms;
+using AccountForm.Forms.NotificationForms;
+using System.Drawing;
 
-namespace BankAccountForm.Logic
+namespace AccountForm.Logic
 {
     class LogicGetAccount
     {
+        NotificationForm notificationForm = new NotificationForm( );
         ConstantClassData constantClassData = new ConstantClassData( );
         DeserializerClass deserializerClass = new DeserializerClass( );
         GetQuantityDirectoryFile getQuantityDirectoryFile = new GetQuantityDirectoryFile( );
         
-        BankAccountForm<int> [ ] data;
+        AccountForm<int> [ ] data;
 
         public LogicGetAccount ( )
         {
-            data = new BankAccountForm<int> [ getQuantityDirectoryFile.GetQuantityDataFile( ) ];
+            data = new AccountForm<int> [ getQuantityDirectoryFile.GetQuantityDataFile( )-1];
         }
 
-        public BankAccountForm<int> this [ int index ]
+        public AccountForm<int> this [ int index ]
         {
             get { return data [ index ]; }
             set { data [ index ] = value; }
@@ -34,16 +37,34 @@ namespace BankAccountForm.Logic
         public void MethodGetAllData (  )
         {
             var lengthMass = getQuantityDirectoryFile.GetQuantityDataFile( )-1;
-            LogicGetAccount BankAccountForm = new LogicGetAccount();
-            for ( int i = 0; i < data.Length ; i++ )
+            LogicGetAccount account = new LogicGetAccount();
+            try
             {
-                BankAccountForm [ i ] = ( BankAccountForm<int> ) deserializerClass.Deserializ( constantClassData.FileNameBinary );
+                for ( int i = 0; i < data.Length; i++ )
+                {
+                    account [ i ] = ( AccountForm<int> ) deserializerClass.Deserializ( constantClassData.FileNameBinary );
+                }
+                deserializerClass.itteration = 0; 
+                AccountMainForm accountMainForm = new AccountMainForm( account.data, lengthMass );
+                accountMainForm.Show( );
             }
-            deserializerClass.itteration = 0;
+            catch (System.Exception ex)
+            {
+                notificationForm.ShowTextNotification
+                    ( "Ошибка дессериализации объектов!", 
+                    ex.ToString( ),
+                    Color.Red, 
+                    Color.Green );
+            }
 
-            AccountMainForm accountMainForm = new AccountMainForm( BankAccountForm.data, lengthMass );
 
-            accountMainForm.Show( );
+
+        }
+
+        public void MethodGetNoData()
+        {
+            AccountMainForm accountMainForm = new AccountMainForm();
+            accountMainForm.Show();
         }
 
 

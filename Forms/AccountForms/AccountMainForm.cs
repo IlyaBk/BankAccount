@@ -1,5 +1,7 @@
-﻿using BankAccountForm.BaseClasses;
-using BankAccountForm.Logic;
+﻿using AccountForm.BaseClasses;
+using AccountForm.Forms.NotificationForms;
+
+using AccountForm.Logic;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -10,11 +12,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace BankAccountForm.Forms.AccountForms
+namespace AccountForm.Forms.AccountForms
 {
     public partial class AccountMainForm : Form
     {
-        internal AccountMainForm( BankAccountForm<int> [ ] logicGetAccount, int lengthmass )
+        internal AccountMainForm( AccountForm<int> [ ] logicGetAccount, int lengthmass )
         {
             statusForm = true;
             InitializeComponent();
@@ -22,7 +24,7 @@ namespace BankAccountForm.Forms.AccountForms
         }
 
         NotificationForm notification = new NotificationForm();
-        AccountAddForm addAccountForm = new AccountAddForm();
+        
 
         public bool statusForm { get; set; }
 
@@ -33,7 +35,17 @@ namespace BankAccountForm.Forms.AccountForms
 
         private void button_AddAccount_Click ( object sender, EventArgs e )
         {
-            addAccountForm.Show( );
+            AccountAddForm accountAddForm = new AccountAddForm();
+            
+           // if( accountAddForm.StatusAccountAddForm == false )
+            //{
+                accountAddForm.Show();
+           // }
+           // else
+          //  {
+              //  notification.ShowTextNotificationMini("Форма уже открыта!", Color.Red );
+          //  }
+            
         }
 
         private void AccountMainForm_Load ( object sender, EventArgs e )
@@ -41,19 +53,26 @@ namespace BankAccountForm.Forms.AccountForms
             
         }
 
-        internal void DSAddAllData(BankAccountForm<int> [] logicGetAccount, int lengthmass)
+        internal void DSAddAllData(AccountForm<int> [] logicGetAccount, int lengthmass)
         {
             if( logicGetAccount != null)
             {
-                BankAccountForm<int> [ ] bankAccountForms = new BankAccountForm<int> [ lengthmass ];
-                bankAccountForms = ( BankAccountForm<int> [ ] ) logicGetAccount;
-
-                DGV.Rows.Add( );
-                for ( int i = 0; i < lengthmass; i++ )
+                AccountForm<int> [ ] accountForms = new AccountForm<int> [ lengthmass ];
+                accountForms = ( AccountForm<int> [ ] ) logicGetAccount;
+                try
                 {
-                    DGV [ 0, i ].Value = bankAccountForms [ i ].IdPerson;
-                    DGV [ 1, i ].Value = bankAccountForms [ i ].Login;
-                    DGV [ 2, i ].Value = bankAccountForms [ i ].Name1;
+                    for ( int i = 0; i < lengthmass; i++ )
+                    {
+                        DGV.Rows.Add( );
+                        DGV [ 0, i ].Value = accountForms [ i ].IdPerson;
+                        DGV [ 1, i ].Value = accountForms [ i ].Login;
+                        DGV [ 2, i ].Value = accountForms [ i ].Name1;
+                    }
+                }
+                catch ( System.Exception ex )
+                {
+                    notification.ShowTextNotification( "Ошибка при работе с данными!", ex.ToString( ), Color.Red, Color.Red );
+
                 }
             }
             else
@@ -72,5 +91,10 @@ namespace BankAccountForm.Forms.AccountForms
         }
 
         ~AccountMainForm ( ) { statusForm = false; }
+
+        private void groupBox5_Enter ( object sender, EventArgs e )
+        {
+
+        }
     }
 }

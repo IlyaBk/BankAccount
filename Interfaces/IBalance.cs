@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BankAccountForm.Interfaces
+namespace AccountForm.Interfaces
 {
     interface IBalance<T>
     {
@@ -21,14 +21,14 @@ namespace BankAccountForm.Interfaces
             (
             decimal depositmoney, 
             int idperson,
-            T idBankAccountForm
+            T idAccountForm
             );  
 
         void BalanceCalculationWithdrawal
             (
             decimal withdrawal,
             int idperson,
-            T idBankAccountForm
+            T idAccountForm
             );
     }
 }

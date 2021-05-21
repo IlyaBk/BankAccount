@@ -1,6 +1,6 @@
-﻿using BankAccountForm.BaseClasses;
+﻿using AccountForm.BaseClasses;
 
-namespace BankAccountForm.Data.Guide
+namespace AccountForm.Data.Guide
 {
     class GuideUserRoleSystemAdmin : AuthorizData
     {

@@ -1,6 +1,7 @@
-﻿using BankAccountForm.Forms;
-using BankAccountForm.Utilites;
-using BankAccountForm.Views;
+﻿using AccountForm.Forms;
+using AccountForm.Forms.NotificationForms;
+using AccountForm.Utilites;
+using AccountForm.Views;
 using System;
 using System.Drawing;
 using System.IO;
@@ -8,7 +9,7 @@ using System.Runtime.Serialization.Formatters.Binary;
 using System.Security.Cryptography;
 using System.Threading.Tasks;
 
-namespace BankAccountForm.Data.SaveData
+namespace AccountForm.Data.SaveData
 {
     //класс ссериализации
     class SerializerClass

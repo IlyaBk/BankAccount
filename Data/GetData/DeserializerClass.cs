@@ -1,31 +1,24 @@
-﻿using BankAccountForm.Utilites;
-using BankAccountForm.Views;
-using System;
-using System.Collections.Generic;
+﻿using System;
 using System.IO;
-using System.Linq;
 using System.Runtime.Serialization.Formatters.Binary;
-using System.Security.Cryptography;
-using System.Text;
-using System.Threading.Tasks;
+using AccountForm.Forms.NotificationForms;
+using System.Drawing;
 
-namespace BankAccountForm.Data.GetData
+namespace AccountForm.Data.GetData
 {
     //класс дессериализации
     class DeserializerClass
     {
-        Consoles consoles;
-        GetQuantityDirectoryFile getQuantityDirectoryFile;
-        public DeserializerClass ( )
-        {
+        public DeserializerClass ( ) {}
 
-        }
+        NotificationForm notificationForm = new NotificationForm();
 
         public bool StatusDeserializ { get; set; }
         public int itteration { get; set; }
         public object obj { get; set; }
         public object Deserializ ( string FilePath)
         {
+
             BinaryFormatter deserializer = new BinaryFormatter( );
             try
             {
@@ -40,14 +33,21 @@ namespace BankAccountForm.Data.GetData
                     StatusDeserializ = true;
                 }
                 else 
-                { 
-                    Console.WriteLine("Ошибка доступа к дирректории или файлу!"); 
+                {
+                    notificationForm.ShowTextNotificationMini
+                        ("Ошибка доступа к дирректории или файлу!",
+                        Color.Red);
                 }
             }
             catch(Exception e)
             {
-                if (e == null) consoles.ErrorMessage( e );
-                StatusDeserializ = true;
+                if( e == null )
+                    notificationForm.ShowTextNotification
+                        ("Ошибка дессириализации из бинара!",
+                        e.ToString(), 
+                        Color.Red,
+                        Color.Red);
+
             }
             return obj;
         }
